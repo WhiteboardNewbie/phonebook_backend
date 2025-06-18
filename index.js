@@ -3,7 +3,7 @@ const morgan = require('morgan')
 
 const app = express()
 
-app.use(express.statis('dist'))
+app.use(express.static('dist'))
 app.use(express.json())
 
 morgan.token('body', req => JSON.stringify(req.body))
